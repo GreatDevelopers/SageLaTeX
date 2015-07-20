@@ -69,7 +69,7 @@ k=1
 t=var('t')
 de = diff(x,t,2)+k*x/m
 z2 = desolve(de,dvar=x,ivar=t,ics=[0,1,0])
-plot=plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),thickness = .1)
+plot=plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),thickness = 1)
 print z2
 \end{sagesilent}
 
