@@ -19,7 +19,8 @@ de = diff(x,t,2)+(k*x)/m
 z=desolve(de,dvar=x,ivar=t)
 \end{sagesilent}
 Consider $m$ be the mass of object, $k$ be spring constant, $x$ be a displacement from equilibrium state of a spring and $t$ is time. 
-\\Therefore, the given differential equation of Simple Harmonic Motion is  
+
+Therefore, the given differential equation of Simple Harmonic Motion is  
 
 \begin{comment}
 \begin{sagesilent}
@@ -69,14 +70,29 @@ k=1
 t=var('t')
 de = diff(x,t,2)+k*x/m
 z2 = desolve(de,dvar=x,ivar=t,ics=[0,1,0])
-plot=plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),thickness = 1)
-print z2
+pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),thickness = 1)
+
+m=1
+k=1
+z3 = desolve(de,dvar=x,ivar=t,ics=[1,1,0])
+print z3
+pl2 = plot(z3,(t,0,10), color=('green'))
+
+m=1
+k=1
+z4 = desolve(de,dvar=x,ivar=t, ics=[0,0,1])
+pl3 = plot(z4,(t,0,10),color=('yellow'))
+
+m=1
+k=1
+z5 = desolve(de,dvar=x,ivar=t, ics=[1,1,1])
+pl4 = plot(z5,(t,0,10),color=('violet'))
 \end{sagesilent}
 
+%$\sage{z2 + z3 + z4 + z5}$
 
 When $m=1$, $k=1$, then the graph is
 
-$$\sageplot{plot}$$
-
+$$\sageplot{pl1+pl2+pl3+pl4}$$
 
 \end{document}
