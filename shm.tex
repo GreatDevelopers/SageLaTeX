@@ -70,7 +70,7 @@ k=1
 t=var('t')
 de = diff(x,t,2)+k*x/m
 z2 = desolve(de,dvar=x,ivar=t,ics=[0,1,0])
-pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),thickness = 1)
+pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),axes_labels=['$t$','$x$'], fontsize=7,axes=True)
 
 m=1
 k=1
@@ -83,7 +83,7 @@ k=1
 z4 = desolve(de,dvar=x,ivar=t, ics=[0,0,1])
 pl3 = plot(z4,(t,0,10),color=('yellow'))
 
-m=1
+im=1
 k=1
 z5 = desolve(de,dvar=x,ivar=t, ics=[1,1,1])
 pl4 = plot(z5,(t,0,10),color=('violet'))
