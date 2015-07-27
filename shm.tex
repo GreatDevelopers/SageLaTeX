@@ -35,7 +35,7 @@ a=var('a')
 \end{comment}
 
 \[
-  \frac{\mathrm{d}^{2}}{\mathrm{d}t^{2}}x +  \sage{k*x/m} = 0.
+  \frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}} +  \sage{k*x/m} = 0.
 \]
 
 
@@ -70,7 +70,7 @@ k=1
 t=var('t')
 de = diff(x,t,2)+k*x/m
 z2 = desolve(de,dvar=x,ivar=t,ics=[0,1,0])
-pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),axes_labels=['$t$','$x$'], fontsize=7,axes=True)
+pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),axes_labels=['$t$','$x$'], fontsize=7)
 
 m=1
 k=1
