@@ -1,48 +1,59 @@
-%       TITLE
+%TITLE
 \documentclass{article}
 \title{Solving Differential Equations representing Simple Harmonic Motion}
 \author{Amritpal Singh}
 \usepackage{sagetex}
 
+%ADDING HEADER AND FOOTER
 \usepackage{geometry}
 \usepackage{graphicx}	
 \geometry{a4paper, margin=1.5in, top=1in, bottom=1in}
 
-
+%MAIN SOURCE
 \begin{document}
 \maketitle
 
-%       SOURCE
 \begin{sagesilent}
+#Declaring spring constant, mass, time as k, m, t respectively in SageMath
 k=var('k')
 m=var('m')
 t=var('t')
 x=function('x',t)
 
+#Assuming spring constant and mass greater than zero
 assume(k>0)
 assume(m>0)
 
+#Writing our differential equation in SageMath
 de = diff(x,t,2)+(k*x)/m
+
+#Soloving our differential equation in SageMath
 z=desolve(de,dvar=x,ivar=t)
 \end{sagesilent}
+
 Consider $m$ be the mass of object, $k$ be spring constant, $x$ be a displacement from equilibrium state of a spring and $t$ is time. 
 
 Therefore, the given differential equation of Simple Harmonic Motion is  
 
+%PRINTING OUR DIFFERENTIAL EQUATION
 \[
   \frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}} +  \sage{k*x/m} = 0.
 \]
 
 Solving the above differential equation, we get,
 
+%PRINTING SOLUTION OF OUR DIFFERNTIAL EQUATION WHICH IS SOLOVED BY SAGEMATH
 $$x = \sage{z}$$
 
 \begin{sagesilent}
+#Declaring mass and spring constant equal to 1
 m=1
 k=1
-t=var('t')
 de = diff(x,t,2)+k*x/m
+
+#Soloving our differential equation by setting up the initial or boundary conditions.
 z2 = desolve(de,dvar=x,ivar=t,ics=[0,1,0])
+#Plotting the graph of solution of our differential equation
 pl1 = plot(z2,(t,0,10),color=('red'), figsize = (4,2.5),axes_labels=['$t$','$x$'], fontsize=7)
 
 m=1
@@ -64,11 +75,10 @@ pl4 = plot(z5,(t,0,10),color=('violet'))
 
 When $m=1$, $k=1$, then the graph is
 
+%PRINTING GRAPH BY USING SAGEMATH
 $$\sageplot{pl1+pl2+pl3+pl4}$$
 
 where red, green, yellow and violet curves are drawn when the initial or boundary conditions are [0,1,0], [1,1,0], [0,0,1] and [1,1,1] respectively.
-
-
 
 The initial or boundary conditions means for a second-order equation, specify the initial $x$, $y$, and $\frac{\mathrm{d}x}{\mathrm{d}t}$, i.e. write [$t$, $x(t)$, $\frac{\mathrm{d}x}{\mathrm{d}t}$]
 
