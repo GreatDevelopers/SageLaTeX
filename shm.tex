@@ -1,11 +1,18 @@
+%       TITLE
 \documentclass{article}
 \title{Solving Differential Equations representing Simple Harmonic Motion}
 \author{Amritpal Singh}
 \usepackage{sagetex}
 
+\usepackage{geometry}
+\usepackage{graphicx}	
+\geometry{a4paper, margin=1.5in, top=1in, bottom=1in}
+
+
 \begin{document}
 \maketitle
 
+%       SOURCE
 \begin{sagesilent}
 k=var('k')
 m=var('m')
@@ -22,47 +29,13 @@ Consider $m$ be the mass of object, $k$ be spring constant, $x$ be a displacemen
 
 Therefore, the given differential equation of Simple Harmonic Motion is  
 
-\begin{comment}
-\begin{sagesilent}
-F=var('F') 
-a=var('a')
-\end{sagesilent}
-
-\[
- \sage{F==m*a} --1 \\ 
- \sage{F==-k*x} --2
-\]
-\end{comment}
-
 \[
   \frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}} +  \sage{k*x/m} = 0.
 \]
 
-
 Solving the above differential equation, we get,
 
 $$x = \sage{z}$$
-
-
-
-%\sage{assume(k>0)}
-
-
-%\begin{sagecommandline}
-%  sage: z=desolve(de,dvar=x,ivar=t)
-%  sage: print z
-%\(sqrt(k)*t/sqrt(m)) + _K1*sin(sqrt(k)*t/sqrt(m))
-
-%d{sagecommandline}
-
-%$\frac{k x\left(t\right)}{m} + D[0, 0]\left(x\right)\left(t\right)$
-
-%$$\sage{de}$$
-
-%$\sage{z}$
-
-%$$\sage{diff(x,t,2)+(k*x)/m}$$
-
 
 \begin{sagesilent}
 m=1
@@ -89,10 +62,14 @@ z5 = desolve(de,dvar=x,ivar=t, ics=[1,1,1])
 pl4 = plot(z5,(t,0,10),color=('violet'))
 \end{sagesilent}
 
-%$\sage{z2 + z3 + z4 + z5}$
-
 When $m=1$, $k=1$, then the graph is
 
 $$\sageplot{pl1+pl2+pl3+pl4}$$
+
+where red, green, yellow and violet curves are drawn when the initial or boundary conditions are [0,1,0], [1,1,0], [0,0,1] and [1,1,1] respectively.
+
+
+
+The initial or boundary conditions means for a second-order equation, specify the initial $x$, $y$, and $\frac{\mathrm{d}x}{\mathrm{d}t}$, i.e. write [$t$, $x(t)$, $\frac{\mathrm{d}x}{\mathrm{d}t}$]
 
 \end{document}
