@@ -125,4 +125,7 @@ sympy-plots-for-*.tex/
 *.bak
 *.sav
 
+# Sage
 *.swp
+*.sage.py
+sage-plots-for-shm.tex
