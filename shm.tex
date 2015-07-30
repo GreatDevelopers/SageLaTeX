@@ -6,9 +6,9 @@
 \pagestyle{fancy}
 
 %ADDING HEADER AND FOOTER
-%\usepackage{geometry}
-%\usepackage{graphicx}	
-%\geometry{a4paper, margin=1.5in, top=1.5in, bottom=1in}
+\usepackage{geometry}
+\usepackage{graphicx}	
+\geometry{a4paper, margin=1.5in, top=1.5in, bottom=1in}
 
 %MAIN SOURCE
 
@@ -78,12 +78,12 @@ z5 = desolve(de,dvar=x,ivar=t, ics=[1,1,1])
 pl4 = plot(z5,(t,0,10),color=('violet'))
 \end{sagesilent}\\
 When $m=1$, $k=1$, then the graph is
-
 %PRINTING GRAPH BY USING SAGEMATH
+\begin{figure}[h!]
 $$\sageplot{pl1+pl2+pl3+pl4}$$
-
-where red, green, yellow and violet curves are drawn when the initial or boundary conditions are [0,1,0], [1,1,0], [0,0,1] and [1,1,1] respectively.
-
+\caption{Graph}
+\end{figure}\\
+here red, green, yellow and violet curves are drawn when the initial or boundary conditions are [0,1,0], [1,1,0], [0,0,1] and [1,1,1] respectively.\\
 The initial or boundary conditions means for a second-order equation, specify the initial $x$, $y$, and $\frac{\mathrm{d}x}{\mathrm{d}t}$, i.e. write [$t$, $x(t)$, $\frac{\mathrm{d}x}{\mathrm{d}t}$]
 
 \section{Numericals}
@@ -91,9 +91,8 @@ The initial or boundary conditions means for a second-order equation, specify th
 \textbf{Example:}\\
 \textit{A spring at rest is suspened from the ceiling wthout mass. A 2 kg weight is then attached to this spring, stretching it 9.8 cm. From a position 2/3 m above equilibrium the weigth is give a downward velocity of 5 m/s. \\
 (a) Find the equation of motion.\\
-(b) What is the amplitude and period of motion?\\
-(c) At what times the mass first equilibrium?\\
-(d) At what time is the mass first exactly 1/2 m below equilibrium?}\\ \\
+(b) What is the amplitude?\\
+(c) At what times the mass first equilibrium?}\\ \\
 \begin{sagesilent}
 m=2
 g=9.8
@@ -131,7 +130,7 @@ z = desolve(de,dvar=x,ivar=t,ics=[0,-2/3,5])
 pl = plot(z,(t,0,2),figsize=(4,2.5),fontsize = 7,axes_labels=['$t$','$x$'],color=('red')) 
 \end{sagesilent}
 
-$$\sage{z}$$\\
+$$x = \sage{z}$$\\
 Now we write this in the more compact and useful form 
 \begin{sagesilent}
 o=var('omega')
@@ -150,5 +149,8 @@ k2=1/2
 a = sqrt(k1^2+k2^2)
 \end{sagesilent}
 $$A = \sage{a}$$
+\begin{figure}[h]
 $$\sageplot{pl}$$
+\caption{Graph}
+\end{figure}
 \end{document}
