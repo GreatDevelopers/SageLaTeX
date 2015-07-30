@@ -1,18 +1,28 @@
 %TITLE
-\documentclass{article}
-\title{Solving Differential Equations representing Simple Harmonic Motion}
-\author{Amritpal Singh}
+\documentclass{report}
 \usepackage{sagetex}
 
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+
 %ADDING HEADER AND FOOTER
-\usepackage{geometry}
-\usepackage{graphicx}	
-\geometry{a4paper, margin=1.5in, top=1in, bottom=1in}
+%\usepackage{geometry}
+%\usepackage{graphicx}	
+%\geometry{a4paper, margin=1.5in, top=1.5in, bottom=1in}
 
 %MAIN SOURCE
-\begin{document}
-\maketitle
 
+\title{Solving Differential Equations representing Simple Harmonic Motion}
+\author{Amritpal Singh}
+\begin{document}
+\begin{titlepage}
+\maketitle
+\tableofcontents
+\end{titlepage}
+
+
+\chapter{Simple Harmonic Motion}
+\section{Derivation}
 \begin{sagesilent}
 #Declaring spring constant, mass, time as k, m, t respectively in SageMath
 k=var('k')
@@ -81,5 +91,8 @@ $$\sageplot{pl1+pl2+pl3+pl4}$$
 where red, green, yellow and violet curves are drawn when the initial or boundary conditions are [0,1,0], [1,1,0], [0,0,1] and [1,1,1] respectively.
 
 The initial or boundary conditions means for a second-order equation, specify the initial $x$, $y$, and $\frac{\mathrm{d}x}{\mathrm{d}t}$, i.e. write [$t$, $x(t)$, $\frac{\mathrm{d}x}{\mathrm{d}t}$]
+
+\section{Numericals}
+
 
 \end{document}
