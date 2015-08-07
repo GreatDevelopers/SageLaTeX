@@ -2,7 +2,7 @@
 \newtheorem{example}{Example}
 \newcommand\solution{Sol.}
 \usepackage{amssymb}
-
+\usepackage{fancyhdr}
 %\newcounter{example}
 %\usepackage{exam}
 
@@ -14,13 +14,24 @@
 \usepackage{sagetex}
 \usepackage{fancyheadings}
 \pagestyle{fancy}
+
+\fancyhf{}
+%\fancyheadoffset{\textwidth}
+\fancyheadoffset{.01 cm}
+\fancyhead[CE,CO]{\leftmark}
+%\fancyhead[RE,LO]{Guides and tutorials}
+\fancyfoot[LE,LO]{\rightmark}
+\fancyfoot[RE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{.5pt}
+
 \newcounter{examplecounter}
 % ADDING HEADER AND FOOTER
 \usepackage{geometry}
 \usepackage{graphicx}
-\geometry{a4paper, margin=1.5in, top=1.5in, bottom=1in}
+\geometry{a4paper, margin=1.5in, top=1.5in, bottom=1.25in}
 
 % TITLE PAGE
 \title{Solving Differential Equations representing Simple Harmonic Motion}
 \author{Amritpal Singh}
-
