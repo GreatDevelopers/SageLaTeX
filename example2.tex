@@ -1,0 +1,37 @@
+\begin{example}
+A particle of mass m is executing simple harmonic motion along x axis under the action of a force $F = -kx$ with a period of $16$ sec. In the course of motion it crosses the equilibrium position at $t = 2 sec$ and acquire a velocity of $4 m/sec$ at $t = 4 sec$. Find the equation of motion and the amplitude of oscillation.
+\end{example}
+
+\solution{
+\begin{sagesilent}
+var('x,t,a,pi,T')
+o = var('omega')
+z = x == a*sin(o*(t-2))
+z1 = a*sin(o*(t-2))
+assume(a>0)
+assume(o>0)
+z2 = diff(z1,t)
+z3 = 4 == z2
+z4 = a == 4/o*cos(2*o)
+z5 = o == 2*pi/T
+z6 = 2*pi/16
+z7 = pi/8
+z8 = a == 4/(z7*1/sqrt(2))
+a = 4/(z7*1/sqrt(2))
+o = pi/8
+z9 =x == a*sin(o*(t-2))
+\end{sagesilent}
+Let the equation be $\sage{z}$ where $a$= amplitude of motion.
+
+Now \begin{equation} \frac{\mathrm{d}x}{\mathrm{d}t} = \sage{z2} \end{equation}
+
+\begin{equation} \sage{z3} \end{equation}
+
+\begin{equation} \sage{z4} \end{equation}
+
+\begin{equation} \sage{z5} = \sage{z6} = \sage{z7} \end{equation}
+
+\begin{equation} \therefore \sage{z8} \end{equation}
+
+\begin{equation} \sage{z9} \end{equation}
+}

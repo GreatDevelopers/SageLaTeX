@@ -1,11 +1,13 @@
-
 \section{Numericals}
 
-\begin{example}A spring at rest is suspened from the ceiling wthout mass. A 2 kg weight is then attached to this spring, stretching it 9.8 cm. From a position 2/3 m above equilibrium the weigth is give a downward velocity of 5 m/s.
-(a) Find the equation of motion.
-(b) What is the amplitude?
-(c) At what times the mass first equilibrium?
+\begin{example}
+A spring at rest is suspened from the ceiling wthout mass. A 2 kg weight is then attached to this spring, stretching it 9.8 cm. From a position 2/3 m above equilibrium the weigth is give a downward velocity of 5 m/s.
+Find the equation of motion.
+What is the amplitude?
+At what times the mass first equilibrium?
 \end{example}
+
+
 \begin{sagesilent}
 m=2
 g=9.8
@@ -14,7 +16,7 @@ x=.098
 # Calcuating spring constant
 k=m*g/x
 \end{sagesilent}
-\solution{}
+\solution{
 Note $m = 2 kg$, $x =9.8 cm$, and $k = mg/x$ = $\sage{k.n(digits=4)}$.
 \begin{sagesilent}
 var('t')
@@ -74,4 +76,4 @@ $$\sageplot{pl}$$
 \caption{Graph}
 
 \end{figure}
-
+}
