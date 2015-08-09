@@ -133,3 +133,4 @@ sage-plots-for-shm.tex
 *.sty
 *.png
 *.sh
+*tex.swo
