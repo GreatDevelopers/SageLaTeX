@@ -6,8 +6,19 @@
 %\newcounter{example}
 %\usepackage{exam}
 
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
 \usepackage{expex}
-%\newcommand{\saveseries}[1]{\expandafter\xdef\csname #1\endcsname{\noexpand\pexcnt\the\pexcnt\relax}}
+%\newcommand{\saveseries}[1]{\expandafter\xdef\csname 
+%\endcsname{\noexpand\pexcnt\the\pexcnt\relax}}
 %\newcommand{\resumeseries}[1]{\expandafter\csname#1\endcsname\ignorespaces}
 
 % PACKAGE USED
@@ -18,7 +29,7 @@
 \fancyhf{}
 %\fancyheadoffset{\textwidth}
 \fancyheadoffset{.01 cm}
-\fancyhead[CE,CO]{\leftmark}
+\fancyhead[LE,LO]{\leftmark}
 %\fancyhead[RE,LO]{Guides and tutorials}
 \fancyfoot[LE,LO]{\rightmark}
 \fancyfoot[RE,RO]{\thepage}
