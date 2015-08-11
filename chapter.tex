@@ -35,13 +35,18 @@ of time has the form of a sine wave function,
 
 % Creating sage environment
 \begin{sagesilent}
+# Declaring variables
 var('t,T,A')
 p = var('pi')
+
+# Declaring y is the function of t
 y = function('y',t)
+
+# Writing equation
 z = A*sin(2*p*t/T)
 \end{sagesilent}
 
-% Writing equation 
+% Writing equation using Sage 
 \begin{equation}
 \sage{y} = \sage{z}
 \end{equation}
