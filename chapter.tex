@@ -1,5 +1,7 @@
+% Declaring chapter name 
 \chapter{Simple Harmonic Motion}
 
+% Creating section
 \section{Introduction: Periodic Motion}
 
 There are two basic ways to measure time: by duration or periodic motion. Early 
@@ -25,11 +27,13 @@ middle of the 18th century, the technology of timekeeping advanced to the point
 that William Harrison developed timekeeping devices that were accurate to one 
 second in a century. 
 
+% Creating subsection of above section 
 \subsection{Simple Harmonic Motion}
 One of the most important examples of periodic motion is simple harmonic motion 
 (SHM), in which some physical quantity varies sinusoidally. Suppose a function 
 of time has the form of a sine wave function,
 
+% Creating sage environment
 \begin{sagesilent}
 var('t,T,A')
 p = var('pi')
@@ -37,6 +41,7 @@ y = function('y',t)
 z = A*sin(2*p*t/T)
 \end{sagesilent}
 
+% Writing equation 
 \begin{equation}
 \sage{y} = \sage{z}
 \end{equation}
@@ -46,7 +51,7 @@ between $+A$ and $-A$, because a sine function varies between $+1$ and $-1$. A
 plot of $y(t)$ vs. time is shown in 
 Figure ~\ref{fig:Sinusoidal function of time}
 
-
+% Inserting picture
 \begin{figure}[h!]
 $$	\includegraphics[scale=0.4]{graph.png}$$
 	\caption{Sinusoidal function of time}
@@ -94,6 +99,7 @@ z2=A*sin(omega*t)
 \sage{y} = \sage{z} = \sage{z1} = \sage{z2}
 \end{equation}
 
+% Creating next section
 \section{Simple Harmonic Motion: Analytic approach}
 Our first example of a system that demonstrates simple harmonic motion is a 
 spring object system on a frictionless surface, shown in
@@ -159,7 +165,6 @@ z = -k*x/m
 
 In this case, the constant of proportionality is $k/m$,
 
-%\section{Derivation}
 \begin{sagesilent}
 # Declaring spring constant, mass, time as k, m, t respectively in SageMath
 k=var('k')
@@ -178,14 +183,13 @@ de = diff(x,t,2)+(k*x)/m
 z=desolve(de,dvar=x,ivar=t)
 \end{sagesilent}
 
-% PRINTING OUR DIFFERENTIAL EQUATION
+% Printing differential equation
 \begin{equation}
   \frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}} +  \sage{k*x/m} = 0
 \end{equation}
 
 Since mass and spring constant cannot be negative and zero so, solving the 
 above differential equation, we get,
-% PRINTING A SOLUTION OF OUR DIFFERNTIAL EQUATION WHICH IS SOLOVED BY SAGEMATH
 
 \begin{equation}
 x = \sage{z}
@@ -224,9 +228,8 @@ pl4 = plot(z5,(t,0,10),color=('violet'))
 
 For $m=1$ and $k=1$, then the graph is shown by Figure 
 \ref{fig:Displacement Time graph1}.
-% ADDING CAPTION TO GRAPH
 \begin{figure}[h!]
-% PRINTING GRAPH BY USING SAGEMATH
+% Ploting graph by using sage
 $$\sageplot{pl1+pl2+pl3+pl4}$$
 \caption{Displacement Time graph}
 \label{fig:Displacement Time graph1}

@@ -2,10 +2,9 @@
 \newtheorem{example}{Example}
 \newcommand\solution{Sol.}
 \usepackage{amssymb}
-\usepackage{fancyhdr}
 
+% Creating links on table of content page
 \usepackage{hyperref}
-
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -15,10 +14,14 @@
 }
 
 \usepackage{expex}
+\newcounter{examplecounter} 
 
-% PACKAGE USED
+% This package is used to include Sage in LaTeX
 \usepackage{sagetex}
+
+% This package is used to added fancy heading
 \usepackage{fancyheadings}
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyheadoffset{.01 cm}
@@ -26,15 +29,12 @@
 \fancyfoot[LE,LO]{\rightmark}
 \fancyfoot[RE,RO]{\thepage}
 
+% Setting width of header footer line
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{.5pt}
 
-\newcounter{examplecounter}
-% ADDING HEADER AND FOOTER
+% Adding margin
 \usepackage{geometry}
 \usepackage{graphicx}
 \geometry{a4paper, margin=1.5in, top=1.5in, bottom=1.25in}
 
-% TITLE PAGE
-\title{Solving Differential Equations representing Simple Harmonic Motion}
-\author{Amritpal Singh}
