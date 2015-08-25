@@ -18,4 +18,4 @@ This folder contain latex document for creating pdf with screen version and prin
 
 ### Note -:
     1. To change pdf from screen version to print version change screen with print in line (\usepackage[screen,panelright,paneltoc]{pdfscreen}) in matrix.tex
-    2. You have to edit matrix.sagetex.sout which is created during process for desired brackets around matrix
+    2. You have to edit matrix.sagetex.sout which is created during process for curly brackets around matrix
