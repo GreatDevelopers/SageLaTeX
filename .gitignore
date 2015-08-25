@@ -131,6 +131,5 @@ sympy-plots-for-*.tex/
 sage-plots-for-shm.tex
 
 *.sty
-*.png
 *.sh
 *tex.swo
