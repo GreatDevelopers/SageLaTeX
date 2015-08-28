@@ -1,4 +1,4 @@
-By reading all these files you would easily learn learn how to use SageMath in LatTeX
+By reading all these files you would easily learn learn how to use SageMath in LaTeX
 
 # Pre-requirement
   * LaTeX
