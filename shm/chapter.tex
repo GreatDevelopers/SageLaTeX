@@ -37,13 +37,13 @@ of time has the form of a sine wave function,
 \begin{sagesilent}
 # Declaring variables
 var('t,T,A')
-p = var('pi')
+pi = var('pi')
 
 # Declaring y is the function of t
 y = function('y',t)
 
 # Writing equation
-z = A*sin(2*p*t/T)
+z = A*sin(2*pi*t/T)
 \end{sagesilent}
 
 % Writing equation using Sage 
@@ -54,7 +54,7 @@ z = A*sin(2*p*t/T)
 where $A > 0$ is the amplitude (maximum value). The function $y(t)$ varies 
 between $+A$ and $-A$, because a sine function varies between $+1$ and $-1$. A 
 plot of $y(t)$ vs. time is shown in 
-Figure ~\ref{fig:Sinusoidal function of time}
+Figure~\ref{fig:Sinusoidal function of time}
 
 % Inserting picture
 \begin{figure}[h!]
@@ -108,7 +108,7 @@ z2=A*sin(omega*t)
 \section{Simple Harmonic Motion: Analytic approach}
 Our first example of a system that demonstrates simple harmonic motion is a 
 spring object system on a frictionless surface, shown in
-Figure \ref{fig:Spring-object system}
+Figure~\ref{fig:Spring-object system}
 
 
 \begin{figure}[h!]
@@ -118,16 +118,16 @@ $$\includegraphics[scale=0.25]{diagram.png}$$
 \end{figure}
 
 The object is attached to one end of a spring. The other end of the spring is 
-attached to a wall at the left in Figure \ref{fig:Spring-object system}.
+attached to a wall at the left in Figure~\ref{fig:Spring-object system}.
 Assume that the object undergoes 
 one-dimensional motion. The spring has a spring constant $k$ and equilibrium 
 length $l_{eq}$ . Choose the origin at the equilibrium position and choose the 
-positive $x$ -direction to the right in the Figure \ref{fig:Spring-object system}.
+positive $x$ -direction to the right in the Figure~\ref{fig:Spring-object system}.
 In the figure, $x > 0$ 
 corresponds to an extended spring, and $x < 0$ to a compressed spring. Define 
 $x(t)$ to be the position of the object with respect to the equilibrium 
 position. The force acting on the spring is a linear restoring force, $F_{x} = 
-−k x$ (Figure ~\ref{Free-body force diagram for spring-object system}).
+−k x$ (Figure~\ref{Free-body force diagram for spring-object system}).
 The initial conditions are as follows. The spring is 
 initially stretched a distance $l_{0}$ and given some initial speed $v_{0}$ to 
 the right away from the equilibrium position. The initial position of the 
@@ -231,8 +231,7 @@ z5 = desolve(de,dvar=x,ivar=t, ics=[1,1,1])
 pl4 = plot(z5,(t,0,10),color=('violet'))
 \end{sagesilent}
 
-For $m=1$ and $k=1$, then the graph is shown by Figure 
-\ref{fig:Displacement Time graph1}.
+For $m=1$ and $k=1$, then the graph is shown by Figure~\ref{fig:Displacement Time graph1}.
 \begin{figure}[h!]
 % Ploting graph by using sage
 $$\sageplot{pl1+pl2+pl3+pl4}$$

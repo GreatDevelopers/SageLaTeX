@@ -63,10 +63,10 @@ $$x = \sage{z}$$\\
 Now we write this in the more compact and useful form 
 \begin{sagesilent}
 o=var('omega')
-p=var('phi')
+phi=var('phi')
 var('t')
 var('A,K1,K2')
-e=A*sin(o*t+p)
+e=A*sin(o*t+phi)
 f=K2*cos(o*t)+K1*sin(o*t)
 a=sqrt((K1)^2+(K2)^2)
 \end{sagesilent}
@@ -79,7 +79,7 @@ a = sqrt(k1^2+k2^2)
 \end{sagesilent}
 $$A = \sage{a}$$
 
-\begin{figure}[h]
+\begin{figure}[h!]
 % Plotting graph
 $$\sageplot{pl}$$
 % Adding caption to graph
