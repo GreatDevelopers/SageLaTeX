@@ -1,12 +1,26 @@
 \chapter{Eigen values and Eigen vectors}
 
 \section{Definition}
-
+\begin{sagesilent}
+        A=var('A')
+        X=var('X')
+        l=var('lambda')
+\end{sagesilent}
+$\lambda$
 \begin{sageblock}
-        a=matrix([[1,2,3],[3,2,1],[4,2,0]])
+        a=matrix([[1,1,3],[1,5,1],[3,1,1]])
         z=a.eigenvalues()
+        z2=a.eigenvectors_right()
+
+        z3=maxima(a)
+        z4=z3.eigenvectors()
 \end{sageblock}
 
 $$\sage{a}$$
 
 $$\sage{z}$$ 
+
+$$\sage{z2}$$
+
+
+$$\sage{z4}$$
