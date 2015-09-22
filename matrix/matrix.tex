@@ -1,17 +1,20 @@
-%===================================Used packages===========================%
-%---------------------------------------------------------------------------%
+%============================Used packages==============================%
+%---	------------------------------------------------------------------%
 \documentclass[12pt]{report}
 \usepackage{sagetex}
 \usepackage{amsmath}
+
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+
+
+
 \usepackage{geometry}
-
 \usepackage{graphicx}	
-\usepackage[screen,panelright,paneltoc]{pdfscreen}
-\begin{screen}
- \margins{.65in}{.65in}{.65in}{.65in}
-	\screensize{6.25in}{8in}
-\end{screen}
-
+\usepackage[print,panelright,paneltoc]{pdfscreen}
+\geometry{a4paper, margin=1.5in,
+ top=1.5in,
+ bottom=1in}
 
 
 %-----------------------------------------------------------------------%
@@ -24,9 +27,9 @@
 \newcommand{\eref}[1]{
 	Eq.\ref{#1}
 }
-%---------------------------------------------------------------------------%
-%=======================Title page==========================================%
-%---------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------%
+%=======================Title page============================================%
+%-----------------------------------------------------------------------------%
 \title{Matrix Algebra: Revision}
 \author{Amarjeet singh and Avi kaur}
 \begin{document}
@@ -91,7 +94,6 @@ row number and the column number.
 
 A rectangular matix \underline{a} is given by : 
 \begin{sagesilent}
-	latex.matrix_delimiters("[","]")
 	a=matrix([[1,2,3],[1,2,4],[6,2,3]])
 	b=matrix([[3,4],[1,2]])
 	c=matrix([[3],[4],[1]])
