@@ -1,4 +1,4 @@
-By reading all these files you would easily learn learn how to use SageMath in LaTeX
+By reading all these files you would easily learn how to use SageMath in LaTeX.
 
 # Pre-requirement
   * LaTeX
@@ -7,11 +7,11 @@ By reading all these files you would easily learn learn how to use SageMath in L
 
 # Installing pre-requirement
 
-* LaTeX: Open a terminal and writing the given below command
+* LaTeX: Open a terminal and write the given below command
  
         $ sudo apt-get install texlive-full
 
-* SageMath: Writing all these commands step by step
+* SageMath: Write all these commands step by step
 
         $ apt-add-repository -y ppa:aims/sagemath
         $ apt-get update
